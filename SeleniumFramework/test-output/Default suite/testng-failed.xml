@@ -5,10 +5,10 @@
     <classes>
       <class name="Test.ExtentReport_TestNG">
         <methods>
-          <include name="flightSearchtest"/>
           <include name="setup"/>
           <include name="openBrowser"/>
           <include name="tearDown"/>
+          <include name="flightlist"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- Test.ExtentReport_TestNG -->

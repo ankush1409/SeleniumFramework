@@ -40,13 +40,17 @@ private static WebDriver driver;
 		 test.log(Status.INFO, "Launching Browser)");
 		
 		DXHomeAct homeOBJ=new DXHomeAct(driver);
-		homeOBJ.joureny_Type();
-		test.pass("Journey type selected");
-		
-		homeOBJ.From_City("Bangkok");
-		test.pass("Origin Selected");
-		homeOBJ.To_City("SGN");
-		test.pass("destination Selected");
+		try {
+			homeOBJ.joureny_Type("oneway");
+			homeOBJ.from_City("Bangkok");
+			homeOBJ.to_City("SGN");
+			homeOBJ.select_Cabin("business"); 
+	        homeOBJ.paxCount(1, 1, 0);
+	        
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		//test.addScreenCaptureFromPath(imagePath);		
 		extent.flush();
 		

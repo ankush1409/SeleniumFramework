@@ -80,10 +80,17 @@ public static void setProperties() {
 		System.out.print(driver.getTitle());
 		
 		DXHomeAct homeOBJ=new DXHomeAct(driver);
-		homeOBJ.joureny_Type();
-		homeOBJ.From_City("Bangkok");
-		homeOBJ.To_City("SGN");
-		
+		try {
+			homeOBJ.joureny_Type("oneway");
+			homeOBJ.from_City("Bangkok");
+			homeOBJ.to_City("SGN");
+			homeOBJ.select_Cabin("business"); 
+	        homeOBJ.paxCount(1, 1, 0);
+	        
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	

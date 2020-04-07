@@ -1,4 +1,4 @@
-package Screens;
+package Test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

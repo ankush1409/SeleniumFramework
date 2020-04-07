@@ -10,8 +10,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-import Screens.DXHome;
-
 
 
 public class FirstTest {
@@ -68,8 +66,8 @@ public class FirstTest {
 			//Thread.sleep(5000);
 			
 			//departure date
-			driver.findElement(By.xpath("//*[@id=\"FieldDate-departureDate--input\"]")).click();
-			
+			//driver.findElement(By.xpath("//*[@id=\FieldDate-departureDate--input]")).click();
+			driver.findElement(By.id("dxp-flight-search-dates-outbound")).click();
 			//input[@id='FieldDate-departureDate--input']
 		    WebElement month= driver.findElement(By.xpath("//button[@class='dp-nav-view dp-cell']//span[2]"));
 		//System.out.println("\n month="+ month.getText());
@@ -101,7 +99,7 @@ public class FirstTest {
 			System.out.print(cell.getText());
 			
 					
-            if (cell.getText().equals("31") && cell.isEnabled()) {
+            if (cell.getText().equals("23") && cell.isEnabled()) {
                 cell.click();
                 //cell.
                 break;
@@ -111,10 +109,13 @@ public class FirstTest {
 		//WebElement date= driver.findElement(By.xpath("//*[@id=\"FieldDate-departureDate--input\"]"));
 		//date.sendKeys(Keys.BACK_SPACE);
 		
-		
+		driver.findElement(By.xpath("//div[@class='class-selection']")).click();
+		driver.findElement(By.xpath("//div[contains(text(),'Business')]")).click();
+		//String cabinClass="//div[contains(text(),"+/'Economy'+")]"
+
 		//submit
-		WebElement buttonSubmit=driver.findElement(By.id("searchSubmit"));
-		buttonSubmit.click();
+		//WebElement buttonSubmit=driver.findElement(By.id("searchSubmit"));
+		//buttonSubmit.click();
 		
 
 	//load more flights

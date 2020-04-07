@@ -4,19 +4,7 @@
 	<test name="ChromeTest">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="Test.newtest2" />
+			<class name="Test.SearchFlight" />
 		</classes>
 	</test><!-- Test -->
-	<test name="firefoxTest">
-		<parameter name="browser" value="chrome"></parameter>
-		<classes>
-			<class name="Test.newtest2" />
-		</classes>
-	</test>
-	<test name="edgeTest">
-	<parameter name="browser" value="chrome"></parameter>
-		<classes>
-			<class name="Test.newtest2" />
-		</classes>
-	</test>
 </suite><!-- Suite -->
